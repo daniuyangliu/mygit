@@ -2,6 +2,7 @@ package db.com.domain;
 /*
 * 这是一个user
 * 这个类些的非常好
+* 大侠到此
 * */
 public class User {
     private Long id;
