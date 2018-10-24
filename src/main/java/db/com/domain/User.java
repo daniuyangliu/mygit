@@ -1,5 +1,7 @@
 package db.com.domain;
-
+/*
+* 这是一个user
+* */
 public class User {
     private Long id;
     private String name;
