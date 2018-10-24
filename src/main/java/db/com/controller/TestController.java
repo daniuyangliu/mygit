@@ -16,9 +16,9 @@ public class TestController {
     @Autowired
     private MainMapper mainMapper;
 
-    @RequestMapping("/user")
+    @RequestMapping("/index")
     public ModelAndView User(){
-        return new ModelAndView("/main/User");
+        return new ModelAndView("/main/main");
     }
 
     @RequestMapping("/list")
