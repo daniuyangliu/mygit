@@ -24,10 +24,15 @@
 </style>
 <script type="text/javascript">
     window.onload=function () {
-        $("#btnsearch").hide();
+        $("#btnsearch1").hide();
     }
     function enter() {
-        $("#btnsearch").show(1000);
+        $("#input1").hide()
+        $("#input2").show()
+    }
+    function down() {
+        $("#input1").show()
+        $("#input2").hide()
     }
 </script>
 <body>
@@ -50,7 +55,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-menu" style="background-color: #0a3e85">
-                    <img style="float:left;width: 150px;height: 80px;" src="${pageContext.request.contextPath}static/image/logo.png">
+                   <a href="/index"><img style="float:left;width: 150px;height: 80px;" src="${pageContext.request.contextPath}static/image/logo.png"></a>
 
                     <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
 
@@ -186,11 +191,18 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-    <div style="position:absolute;width: 520px;height:170px;background-color:#af8711;z-index: 5;margin-top: -110px;margin-left: 150px">
-        <div style="margin-left: 55px;font-size: 20px;font-weight: bold;margin-top: 10px">货物追踪<a href="javascript:;" style="margin-left: 250px;font-size: 15px">手机号查询</a></div>
+    <div id="input1" style="position:absolute;width: 520px;height:170px;background-color:#af8711;z-index: 5;margin-top: -110px;margin-left: 150px">
+        <div style="margin-left: 55px;font-size: 20px;font-weight: bold;margin-top: 30px">货物追踪<a href="javascript:;" style="margin-left: 250px;font-size: 15px">手机号查询</a></div>
         <div onmousedown="enter()" onmouseout="out()" class="position-relative wper100 textarea-wrp focus">
-             <textarea id="textarea" type="text" placeholder="请输入订单号查询" style="width: 400px;height: 90px;margin-left: 55px;resize:none"></textarea>
-                <button id="btnsearch" style="width:90px;margin-left: -118px;margin-top: -34px;border-radius: 5px;background-color: #eeeeee">查询</button>
+             <textarea id="textarea" type="text" placeholder="请输入订单号查询" style="border-radius: 6px;width: 400px;height: 50px;margin-left: 55px;resize:none"></textarea>
+                <%--<button id="btnsearch" style="width:90px;margin-left: -118px;margin-top: -34px;border-radius: 5px;background-color: #eeeeee">查询</button>--%>
+        </div>
+    </div>
+    <div id="input2"  onmousedown="down()" style="display: none;position:absolute;width: 520px;height:300px;background-color:#af8711;z-index: 5;margin-top: -240px;margin-left: 150px">
+        <div style="margin-left: 55px;font-size: 20px;font-weight: bold;margin-top: 30px">货物追踪<a href="javascript:;" style="margin-left: 250px;font-size: 15px">手机号查询</a></div>
+        <div onmousedown="enter()" onmouseout="out()" class="position-relative wper100 textarea-wrp focus">
+             <textarea id="textarea1" type="text" placeholder="请输入订单号查询" style="border-radius: 6px;width: 400px;height: 200px;margin-left: 55px;resize:none"></textarea>
+                <button id="btnsearch2" style="width:90px;margin-left: -118px;margin-top: -34px;border-radius: 5px;background-color: #eeeeee">查询</button>
         </div>
     </div>
     <div class="fourkey" style="margin-left: 50px;position: absolute;width: 900px;height: 90px;background-color: #444a7c;z-index: 5;margin-left: 670px;margin-top: -30px">
