@@ -8,7 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>银帆科技</title>
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}static/image/favicon.ico">
     <link rel="stylesheet" href="${pageContext.request.contextPath}static/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}static/css/daohang.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}static/css/bootsnav.css">
@@ -29,10 +30,6 @@
     function enter() {
         $("#input1").hide()
         $("#input2").show()
-    }
-    function down() {
-        $("#input1").show()
-        $("#input2").hide()
     }
 </script>
 <body>
@@ -193,12 +190,12 @@
     </a>
     <div id="input1" style="position:absolute;width: 520px;height:170px;background-color:#af8711;z-index: 5;margin-top: -110px;margin-left: 150px">
         <div style="margin-left: 55px;font-size: 20px;font-weight: bold;margin-top: 30px">货物追踪<a href="javascript:;" style="margin-left: 250px;font-size: 15px">手机号查询</a></div>
-        <div onmousedown="enter()" onmouseout="out()" class="position-relative wper100 textarea-wrp focus">
+        <div onmousedown="enter()"  class="position-relative wper100 textarea-wrp focus">
              <textarea id="textarea" type="text" placeholder="请输入订单号查询" style="border-radius: 6px;width: 400px;height: 50px;margin-left: 55px;resize:none"></textarea>
                 <%--<button id="btnsearch" style="width:90px;margin-left: -118px;margin-top: -34px;border-radius: 5px;background-color: #eeeeee">查询</button>--%>
         </div>
     </div>
-    <div id="input2"  onmousedown="down()" style="display: none;position:absolute;width: 520px;height:300px;background-color:#af8711;z-index: 5;margin-top: -240px;margin-left: 150px">
+    <div id="input2" style="display: none;position:absolute;width: 520px;height:300px;background-color:#af8711;z-index: 5;margin-top: -240px;margin-left: 150px">
         <div style="margin-left: 55px;font-size: 20px;font-weight: bold;margin-top: 30px">货物追踪<a href="javascript:;" style="margin-left: 250px;font-size: 15px">手机号查询</a></div>
         <div onmousedown="enter()" onmouseout="out()" class="position-relative wper100 textarea-wrp focus">
              <textarea id="textarea1" type="text" placeholder="请输入订单号查询" style="border-radius: 6px;width: 400px;height: 200px;margin-left: 55px;resize:none"></textarea>
