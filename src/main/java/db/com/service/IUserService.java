@@ -5,6 +5,9 @@ import db.com.domain.User;
 
 import java.util.List;
 
+/**
+ * 呵呵
+ */
 public interface IUserService {
     void save(User user);
 

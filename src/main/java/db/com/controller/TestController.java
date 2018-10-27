@@ -23,6 +23,16 @@ public class TestController {
 
     @RequestMapping("/list")
     public List<User> list(){
+        System.out.println("断一发");
         return mainMapper.getAll();
+    }
+    /*三方登陆模块*/
+    @RequestMapping("/qqindex")
+    public  ModelAndView qqindex(){
+        return new ModelAndView("/login/qqindex");
+    }
+    @RequestMapping("/qqlogin")
+    public  ModelAndView qqlogin(){
+        return new ModelAndView("/login/qq");
     }
 }
